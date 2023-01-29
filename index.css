@@ -1,0 +1,104 @@
+*,
+input,
+textarea,
+button {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font: inherit;
+}
+
+html {
+	--fg: black;
+	--bg: white;
+	--fg-dim: #333;
+	--bg-dim: #ddd;
+	overflow-y: scroll;
+}
+
+a {
+	text-decoration: none;
+}
+
+main {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+.username-form {
+	padding: 40px 0;
+	display: flex;
+	gap: 10px;
+}
+
+.username-label {
+	display: flex;
+	gap: 0;
+	align-items: center;
+}
+
+.archived-badge {
+	font-color: var(--fg-dim);
+	font-style: italic;
+	font-size: 0.8em;
+}
+
+.username {
+	border: none;
+	border-bottom: 1px solid var(--fg);
+	width: 20ch;
+	padding: 4px;
+}
+
+.metadata {
+	display: flex;
+	flex-flow: row;
+	gap: 10px;
+	list-style: none;
+}
+
+.items {
+	list-style: none;
+	max-width: 100ch;
+}
+
+.item {
+	display: block;
+	padding: 5px;
+	border: 5px solid transparent;
+	color: inherit;
+}
+
+.item:focus {
+	border-color: var(--fg);
+}
+
+.item:not(:focus):hover {
+	border-color: var(--bg-dim);
+}
+
+.reponame {
+	text-decoration: underline;
+}
+
+.description,
+.metadata {
+	color: var(--fg-dim);
+	font-size: 0.8em;
+}
+
+.header {
+	display: flex;
+	flex-flow: row;
+	gap: 10px;
+	align-items: center;
+}
+
+.you-star {
+	font-size: 0.8em;
+}
+
+.submit:not(:disabled) {
+	cursor: pointer;
+}
